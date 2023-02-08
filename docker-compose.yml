@@ -1,0 +1,107 @@
+version: '3.8'
+
+networks:
+  net_bridge:
+    driver: bridge
+
+services:
+  docker_api:
+    image: testcloudreg1/ocl_reg:dockerapi
+    build:
+      context: ./dockerapi
+      dockerfile: Dockerfile
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8000:80"
+    networks:
+      - net_bridge
+
+  web_api:
+    image: testcloudreg1/ocl_reg:webapi
+    build:
+      context: ./webapi
+      dockerfile: Dockerfile
+    ports:
+      - "8001:80"
+    depends_on:
+      - postgres_db
+    #   - docker_api
+    # environment:
+    #   DB_CONNECTION_STRING: "host=postgres_db;port=5432;database=octopus_db;username=user;password=pass"
+    networks:
+      - net_bridge
+
+  web_app:
+    image: testcloudreg1/ocl_reg:webapp
+    build:
+      context: ./webapp
+      dockerfile: Dockerfile
+    # volumes:
+      # - ./webapp/src:/app/src
+    ports:
+      - "4200:80"
+    depends_on:
+      - web_api
+    networks:
+      - net_bridge
+
+  postgres_db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    volumes:
+      # Persist Postgres data
+      - postgres_db_volume:/var/lib/postgresql/data
+      # Populate the database with initial seed data
+      - ./webapi/dbscripts/seed.sql:/docker-entrypoint-initdb.d/seed.sql
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: octopus_db
+    networks:
+      - net_bridge
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    depends_on:
+      - postgres_db
+    ports:
+      - "5050:80"
+    volumes:
+      - ./pgadmin/pgadmin_servers_config.json:/pgadmin4/servers.json
+    networks:
+      - net_bridge
+
+  redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --save 20 1 --loglevel warning
+    volumes:
+      - redis_db_volume:/var/lib/redis/data
+    networks:
+      - net_bridge
+
+  # nginx:
+  #   container_name: nginx
+  #   build:
+  #     context: ./nginx
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8000:8080"
+  #   depends_on:
+  #     - docker_api
+  #   restart: always
+  #   networks:
+  #     - net_bridge
+
+volumes:
+  postgres_db_volume:
+  redis_db_volume:
