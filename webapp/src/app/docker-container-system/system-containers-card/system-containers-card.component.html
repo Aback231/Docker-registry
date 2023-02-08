@@ -1,0 +1,45 @@
+<div class="card mb-4 bg-light" style="margin: 10px;width: 300px;">
+    <div class="card-img-wrapper" style="padding: 20px;">
+        <img src="{{'./assets/docker.png'}}" class="card-img-top">
+    </div>
+    <div class="card-body p-1">
+        <ul class="list-inline container-icons animate text-center">
+            <li class="list-inline-item"><button (click)="pullImage()" tippy="Download new Docker Image"
+                    class="btn btn-primary">
+                    <i class="fa fa-download"></i></button></li>
+            <li class="list-inline-item"><button (click)="containerUpdate()"
+                    tippy="Update Container from local Docker Image" class="btn btn-primary">
+                    <i class="fa fa-wrench"></i></button></li>
+            <li class="list-inline-item"><button (click)="pullImage(true)"
+                    tippy="Download new Image & update Container" class="btn btn-primary">
+                    <i class="fa fa-refresh"></i></button></li>
+            <li class="list-inline-item"><button (click)="containerStop()" tippy="Stop containers"
+                    class="btn btn-primary">
+                    <i class="fa fa-stop"></i></button></li>
+            <li class="list-inline-item"><button tippy="Container details" class="btn btn-primary">
+                    <i class="fa fa-info"></i></button></li>
+        </ul>
+        <div *ngIf="(container?.image == container?.imageID)">
+            <p class="card-title text-center mb-1"><i class="fa fa-image mr-2"></i>
+                (none) Pending update...
+            </p>
+        </div>
+        <div *ngIf="(container?.image != container?.imageID)">
+            <p class="card-title text-center mb-1"><i class="fa fa-image mr-2"></i>
+                {{ container?.image }}
+            </p>
+        </div>
+        <!-- <p class="card-title text-center mb-1"><i class="fa fa-hashtag mr-2"></i>
+            {{container?.imageID}}
+        </p> -->
+        <p class="card-title text-center mb-1"><i class="fa fa-play mr-2"></i>
+            {{container?.state}}
+        </p>
+        <p class="card-title text-center mb-1"><i class="fa fa-comment mr-2"></i>
+            {{container?.status}}
+        </p>
+        <p class="card-title text-center mb-1"><i class="fa fa-clock-o mr-2"></i>
+            {{container?.created}}
+        </p>
+    </div>
+</div>

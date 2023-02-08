@@ -1,0 +1,41 @@
+<div class="row" *ngIf="member">
+    <div class="col-4">
+        <div class="card">
+            <img src="{{'./assets/docker.png'}}" alt="{{member.id}}" 
+                class="card-img-top img-thumbnail">
+            <div class="card-body">
+                <div>
+                    <strong>RepositoryName:</strong>
+                    <p>{{member.id}}, {{member.id}}</p>
+                </div>
+                <div>
+                    <strong>Tag:</strong>
+                    <p>{{member.id}}</p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="btn-group d-flex">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-8">
+        <tabset class="member-tabset">
+            <tab heading='About {{member.id}}'>
+                <h4>Description</h4>
+                <p>{{member.id}}</p>
+                <h4>Looking for</h4>
+                <p>{{member.id}}</p>
+            </tab>
+            <tab heading='Logs'>
+                <h4>Logs</h4>
+                <p>{{member.id}}</p>
+            </tab>
+            <tab heading='Messages'>
+                <p>Messages will go here</p>
+            </tab>
+        </tabset>
+    </div>
+</div>
