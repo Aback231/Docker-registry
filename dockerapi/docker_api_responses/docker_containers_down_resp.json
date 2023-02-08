@@ -1,0 +1,53 @@
+[
+  {
+    "id": "db17370615aaf310919e64216d50ba335606dd60c0e816c7e113c421ee70fa66",
+    "names": [
+      "/hungry_nightingale"
+    ],
+    "image": "controll",
+    "imageID": "sha256:1eb0760bc235676ee54e4ac920c84ed996d420b2197b86d600f4192273263692",
+    "command": "/bin/sh",
+    "created": "2022-11-10T17:05:41Z",
+    "ports": [],
+    "sizeRw": 0,
+    "sizeRootFs": 0,
+    "labels": {
+      "desktop.docker.io/binds/0/Source": "/var/run/docker.sock",
+      "desktop.docker.io/binds/0/SourceKind": "dockerSocketProxied",
+      "desktop.docker.io/binds/0/Target": "/var/run/docker.sock"
+    },
+    "state": "running",
+    "status": "Up 5 minutes",
+    "networkSettings": {
+      "networks": {
+        "bridge": {
+          "ipamConfig": null,
+          "links": null,
+          "aliases": null,
+          "networkID": "3bf9182c620dbe07b9e0d190dc131825cdef95c097c557d51c661c57d85ac4ae",
+          "endpointID": "0d91288ce3cb6a65ca40890a3039f0fd91a3dc1ebca19550723182388b3136c9",
+          "gateway": "172.17.0.1",
+          "ipAddress": "172.17.0.2",
+          "ipPrefixLen": 16,
+          "iPv6Gateway": "",
+          "globalIPv6Address": "",
+          "globalIPv6PrefixLen": 0,
+          "macAddress": "02:42:ac:11:00:02",
+          "driverOpts": null
+        }
+      }
+    },
+    "mounts": [
+      {
+        "type": "bind",
+        "name": null,
+        "source": "/run/host-services/docker.proxy.sock",
+        "destination": "/var/run/docker.sock",
+        "driver": null,
+        "mode": "",
+        "rw": true,
+        "propagation": "rprivate"
+      }
+    ]
+  }
+]

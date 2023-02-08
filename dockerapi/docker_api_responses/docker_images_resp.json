@@ -1,0 +1,142 @@
+[
+    {
+      "containers": -1,
+      "created": "2022-11-10T16:50:00Z",
+      "id": "sha256:212da25ca04a29d713b62418a1f1e103b34584b26b3cbedaeb490bcc9338e83b",
+      "labels": null,
+      "parentID": "",
+      "repoDigests": null,
+      "repoTags": [
+        "web:latest"
+      ],
+      "sharedSize": -1,
+      "size": 640047655,
+      "virtualSize": 640047655
+    },
+    {
+      "containers": -1,
+      "created": "2022-11-10T16:45:48Z",
+      "id": "sha256:fade2c092ef06ae1537f8ed11ce78d1c643816071699763fedb919bb795d01c1",
+      "labels": null,
+      "parentID": "",
+      "repoDigests": null,
+      "repoTags": [
+        "backend:latest",
+        "scheduler:latest",
+        "worker:latest"
+      ],
+      "sharedSize": -1,
+      "size": 1455287936,
+      "virtualSize": 1455287936
+    },
+    {
+      "containers": -1,
+      "created": "2022-11-10T16:42:22Z",
+      "id": "sha256:930101b47f8f24ed69bdfeb8b5742cb61ddf32edb4155cd18a043edd1e1b1e8a",
+      "labels": {
+        "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>"
+      },
+      "parentID": "",
+      "repoDigests": null,
+      "repoTags": [
+        "media:latest"
+      ],
+      "sharedSize": -1,
+      "size": 35157181,
+      "virtualSize": 35157181
+    },
+    {
+      "containers": -1,
+      "created": "2022-11-10T16:41:11Z",
+      "id": "sha256:1eb0760bc235676ee54e4ac920c84ed996d420b2197b86d600f4192273263692",
+      "labels": null,
+      "parentID": "",
+      "repoDigests": null,
+      "repoTags": [
+        "controll:latest"
+      ],
+      "sharedSize": -1,
+      "size": 286167016,
+      "virtualSize": 286167016
+    },
+    {
+      "containers": -1,
+      "created": "2022-11-09T20:31:58Z",
+      "id": "sha256:a006c98ad40b032daa897833c9b45b78065efe0168e687c9cd55a151c8177a37",
+      "labels": {
+        "org.opencontainers.image.authors": "https://bitnami.com/contact",
+        "org.opencontainers.image.description": "Application packaged by Bitnami",
+        "org.opencontainers.image.ref.name": "15.0.0-debian-11-r7",
+        "org.opencontainers.image.source": "https://github.com/bitnami/containers/tree/main/bitnami/postgresql",
+        "org.opencontainers.image.title": "postgresql",
+        "org.opencontainers.image.vendor": "VMware, Inc.",
+        "org.opencontainers.image.version": "15.0.0"
+      },
+      "parentID": "",
+      "repoDigests": [
+        "bitnami/postgresql@sha256:d20c095c0027fcc5747751ff3d2e387606f93aed49ab81546de2653c266a4670"
+      ],
+      "repoTags": [
+        "bitnami/postgresql:latest"
+      ],
+      "sharedSize": -1,
+      "size": 279159495,
+      "virtualSize": 279159495
+    },
+    {
+      "containers": -1,
+      "created": "2022-11-09T06:12:22Z",
+      "id": "sha256:6b0630e8d13c74c10f51b1a0342e5fd2400784a615c9bbe1944e228ce923c2ec",
+      "labels": {
+        "org.opencontainers.image.authors": "https://bitnami.com/contact",
+        "org.opencontainers.image.description": "Application packaged by Bitnami",
+        "org.opencontainers.image.ref.name": "7.0.5-debian-11-r17",
+        "org.opencontainers.image.source": "https://github.com/bitnami/containers/tree/main/bitnami/redis",
+        "org.opencontainers.image.title": "redis",
+        "org.opencontainers.image.vendor": "VMware, Inc.",
+        "org.opencontainers.image.version": "7.0.5"
+      },
+      "parentID": "",
+      "repoDigests": [
+        "bitnami/redis@sha256:aaf804edcb2ff411ab469e262e06f09020e2030990fbfacb895cb8c858ef6852"
+      ],
+      "repoTags": [
+        "bitnami/redis:latest"
+      ],
+      "sharedSize": -1,
+      "size": 94555480,
+      "virtualSize": 94555480
+    },
+    {
+      "containers": -1,
+      "created": "2020-08-28T13:26:18Z",
+      "id": "sha256:0ddebcbe71c466edc8a4dfe14dab89b1e3a7b8a74d2173bba667fe7c93f009ff",
+      "labels": null,
+      "parentID": "",
+      "repoDigests": [
+        "eoranged/rq-dashboard@sha256:a4300e292b3e6ff65fe662fac01930bb22d10228d7389a6ad06581704464aa84"
+      ],
+      "repoTags": [
+        "eoranged/rq-dashboard:latest"
+      ],
+      "sharedSize": -1,
+      "size": 242376860,
+      "virtualSize": 242376860
+    },
+    {
+      "containers": -1,
+      "created": "2020-08-11T18:23:27Z",
+      "id": "sha256:4de68494cd0dbcbc141beb755eedce4d328ab10b2d1061d74c2489e0af5f28a9",
+      "labels": null,
+      "parentID": "",
+      "repoDigests": [
+        "mailhog/mailhog@sha256:8d76a3d4ffa32a3661311944007a415332c4bb855657f4f6c57996405c009bea"
+      ],
+      "repoTags": [
+        "mailhog/mailhog:latest"
+      ],
+      "sharedSize": -1,
+      "size": 392009632,
+      "virtualSize": 392009632
+    }
+  ]

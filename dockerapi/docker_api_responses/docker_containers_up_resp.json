@@ -1,0 +1,700 @@
+[
+  {
+    "id": "3e62dbb123a736774abe2fec53848d1a4c9f2f3bd5446085a069ecf7732b1ddb",
+    "names": [
+      "/services_web_1"
+    ],
+    "image": "web",
+    "imageID": "sha256:212da25ca04a29d713b62418a1f1e103b34584b26b3cbedaeb490bcc9338e83b",
+    "command": "docker-entrypoint.sh npm start",
+    "created": "2022-11-10T17:11:38Z",
+    "ports": [
+      {
+        "ip": "0.0.0.0",
+        "privatePort": 3000,
+        "publicPort": 50000,
+        "type": "tcp"
+      }
+    ],
+    "sizeRw": 0,
+    "sizeRootFs": 0,
+    "labels": {
+      "com.docker.compose.config-hash": "9c5997a12c1aec8ea518f44175d3ad6aea62e4f83ea637cc2a2dd9a1dc3246ca",
+      "com.docker.compose.container-number": "1",
+      "com.docker.compose.oneoff": "False",
+      "com.docker.compose.project": "services",
+      "com.docker.compose.project.config_files": "docker-compose.yaml",
+      "com.docker.compose.project.working_dir": "/Users/ap/problemshared/services",
+      "com.docker.compose.service": "web",
+      "com.docker.compose.version": "1.29.2"
+    },
+    "state": "running",
+    "status": "Up 11 seconds",
+    "networkSettings": {
+      "networks": {
+        "services_docker-problemshared": {
+          "ipamConfig": null,
+          "links": null,
+          "aliases": null,
+          "networkID": "07343fe27217172ad7a47364e2b432b6ef55463d1b80edfe0013643644bb9cc7",
+          "endpointID": "ce13775dadf6fc76d9bbe0bd0d852a57f4cdd6faaac9b1b418cb644fe343cb39",
+          "gateway": "172.21.0.1",
+          "ipAddress": "172.21.0.11",
+          "ipPrefixLen": 16,
+          "iPv6Gateway": "",
+          "globalIPv6Address": "",
+          "globalIPv6PrefixLen": 0,
+          "macAddress": "02:42:ac:15:00:0b",
+          "driverOpts": null
+        }
+      }
+    },
+    "mounts": []
+  },
+  {
+    "id": "d1b8f13553e0c53d5a1b55418ee1dcc39b6e956995f0a1cbdbedad527c998e9d",
+    "names": [
+      "/services_backend_cms_1"
+    ],
+    "image": "backend",
+    "imageID": "sha256:fade2c092ef06ae1537f8ed11ce78d1c643816071699763fedb919bb795d01c1",
+    "command": "./boot_cms.sh",
+    "created": "2022-11-10T17:11:37Z",
+    "ports": [],
+    "sizeRw": 0,
+    "sizeRootFs": 0,
+    "labels": {
+      "com.docker.compose.config-hash": "6a69aeca02906fc64d916ba1f0188dbcc9ceb5ae817a71742be09e6cc08e142e",
+      "com.docker.compose.container-number": "1",
+      "com.docker.compose.oneoff": "False",
+      "com.docker.compose.project": "services",
+      "com.docker.compose.project.config_files": "docker-compose.yaml",
+      "com.docker.compose.project.working_dir": "/Users/ap/problemshared/services",
+      "com.docker.compose.service": "backend_cms",
+      "com.docker.compose.version": "1.29.2"
+    },
+    "state": "restarting",
+    "status": "Restarting (3) Less than a second ago",
+    "networkSettings": {
+      "networks": {
+        "services_docker-problemshared": {
+          "ipamConfig": null,
+          "links": null,
+          "aliases": null,
+          "networkID": "07343fe27217172ad7a47364e2b432b6ef55463d1b80edfe0013643644bb9cc7",
+          "endpointID": "",
+          "gateway": "",
+          "ipAddress": "",
+          "ipPrefixLen": 0,
+          "iPv6Gateway": "",
+          "globalIPv6Address": "",
+          "globalIPv6PrefixLen": 0,
+          "macAddress": "",
+          "driverOpts": null
+        }
+      }
+    },
+    "mounts": [
+      {
+        "type": "volume",
+        "name": "services_backend_static",
+        "source": "/var/lib/docker/volumes/services_backend_static/_data",
+        "destination": "/app/app/static",
+        "driver": "local",
+        "mode": "rw",
+        "rw": true,
+        "propagation": ""
+      }
+    ]
+  },
+  {
+    "id": "f8874d9731ac1b61f6d69baf6f6626803d065cd69701a7133876322df665ffd2",
+    "names": [
+      "/services_backend_worker_1"
+    ],
+    "image": "worker",
+    "imageID": "sha256:fade2c092ef06ae1537f8ed11ce78d1c643816071699763fedb919bb795d01c1",
+    "command": "./boot_worker.sh",
+    "created": "2022-11-10T17:11:37Z",
+    "ports": [],
+    "sizeRw": 0,
+    "sizeRootFs": 0,
+    "labels": {
+      "com.docker.compose.config-hash": "4767a9e1b8435add06812ddf72d4eb0869494183fd4ec794dd6b9e24a861d358",
+      "com.docker.compose.container-number": "1",
+      "com.docker.compose.oneoff": "False",
+      "com.docker.compose.project": "services",
+      "com.docker.compose.project.config_files": "docker-compose.yaml",
+      "com.docker.compose.project.working_dir": "/Users/ap/problemshared/services",
+      "com.docker.compose.service": "backend_worker",
+      "com.docker.compose.version": "1.29.2"
+    },
+    "state": "running",
+    "status": "Up Less than a second",
+    "networkSettings": {
+      "networks": {
+        "services_docker-problemshared": {
+          "ipamConfig": null,
+          "links": null,
+          "aliases": null,
+          "networkID": "07343fe27217172ad7a47364e2b432b6ef55463d1b80edfe0013643644bb9cc7",
+          "endpointID": "75ada2c07c3a7d5df9bcbe2b9a3880c743af2137f3dd768d4fbe501ed45a3957",
+          "gateway": "172.21.0.1",
+          "ipAddress": "172.21.0.8",
+          "ipPrefixLen": 16,
+          "iPv6Gateway": "",
+          "globalIPv6Address": "",
+          "globalIPv6PrefixLen": 0,
+          "macAddress": "02:42:ac:15:00:08",
+          "driverOpts": null
+        }
+      }
+    },
+    "mounts": [
+      {
+        "type": "volume",
+        "name": "services_backend_static",
+        "source": "/var/lib/docker/volumes/services_backend_static/_data",
+        "destination": "/app/app/static",
+        "driver": "local",
+        "mode": "rw",
+        "rw": true,
+        "propagation": ""
+      }
+    ]
+  },
+  {
+    "id": "eccdd7168762f8c0902a3b428812f21dedf2bd996db0909ef6e01a1c5824a954",
+    "names": [
+      "/services_backend_api_1"
+    ],
+    "image": "backend",
+    "imageID": "sha256:fade2c092ef06ae1537f8ed11ce78d1c643816071699763fedb919bb795d01c1",
+    "command": "./boot_api.sh",
+    "created": "2022-11-10T17:11:37Z",
+    "ports": [
+      {
+        "ip": "0.0.0.0",
+        "privatePort": 5000,
+        "publicPort": 50001,
+        "type": "tcp"
+      }
+    ],
+    "sizeRw": 0,
+    "sizeRootFs": 0,
+    "labels": {
+      "com.docker.compose.config-hash": "7edcca7f5bd873b2cdde571c0af4526cb7865d3f9b13ef4b06458ef61557090d",
+      "com.docker.compose.container-number": "1",
+      "com.docker.compose.oneoff": "False",
+      "com.docker.compose.project": "services",
+      "com.docker.compose.project.config_files": "docker-compose.yaml",
+      "com.docker.compose.project.working_dir": "/Users/ap/problemshared/services",
+      "com.docker.compose.service": "backend_api",
+      "com.docker.compose.version": "1.29.2"
+    },
+    "state": "running",
+    "status": "Up 12 seconds",
+    "networkSettings": {
+      "networks": {
+        "services_docker-problemshared": {
+          "ipamConfig": null,
+          "links": null,
+          "aliases": null,
+          "networkID": "07343fe27217172ad7a47364e2b432b6ef55463d1b80edfe0013643644bb9cc7",
+          "endpointID": "fead2783d5a6feae96aabf263d3cefb46ede306612d1a76099eb32c87e0eed58",
+          "gateway": "172.21.0.1",
+          "ipAddress": "172.21.0.10",
+          "ipPrefixLen": 16,
+          "iPv6Gateway": "",
+          "globalIPv6Address": "",
+          "globalIPv6PrefixLen": 0,
+          "macAddress": "02:42:ac:15:00:0a",
+          "driverOpts": null
+        }
+      }
+    },
+    "mounts": [
+      {
+        "type": "volume",
+        "name": "services_backend_static",
+        "source": "/var/lib/docker/volumes/services_backend_static/_data",
+        "destination": "/app/app/static",
+        "driver": "local",
+        "mode": "rw",
+        "rw": true,
+        "propagation": ""
+      }
+    ]
+  },
+  {
+    "id": "9de257e10659762f5f976069edaf12fbeafe0657391b6efa9783192b832834b3",
+    "names": [
+      "/services_backend_scheduler_1"
+    ],
+    "image": "scheduler",
+    "imageID": "sha256:fade2c092ef06ae1537f8ed11ce78d1c643816071699763fedb919bb795d01c1",
+    "command": "./boot_scheduler.sh",
+    "created": "2022-11-10T17:11:37Z",
+    "ports": [],
+    "sizeRw": 0,
+    "sizeRootFs": 0,
+    "labels": {
+      "com.docker.compose.config-hash": "1f628c77b7d5f87c2918725bcc0e036c0641f01513f1c9456989d98b1d95ea29",
+      "com.docker.compose.container-number": "1",
+      "com.docker.compose.oneoff": "False",
+      "com.docker.compose.project": "services",
+      "com.docker.compose.project.config_files": "docker-compose.yaml",
+      "com.docker.compose.project.working_dir": "/Users/ap/problemshared/services",
+      "com.docker.compose.service": "backend_scheduler",
+      "com.docker.compose.version": "1.29.2"
+    },
+    "state": "running",
+    "status": "Up Less than a second",
+    "networkSettings": {
+      "networks": {
+        "services_docker-problemshared": {
+          "ipamConfig": null,
+          "links": null,
+          "aliases": null,
+          "networkID": "07343fe27217172ad7a47364e2b432b6ef55463d1b80edfe0013643644bb9cc7",
+          "endpointID": "3a440eb2635eb93157362c44dea4e2dc8fbadb669fe5ce3f35baff14731d985a",
+          "gateway": "172.21.0.1",
+          "ipAddress": "172.21.0.7",
+          "ipPrefixLen": 16,
+          "iPv6Gateway": "",
+          "globalIPv6Address": "",
+          "globalIPv6PrefixLen": 0,
+          "macAddress": "02:42:ac:15:00:07",
+          "driverOpts": null
+        }
+      }
+    },
+    "mounts": [
+      {
+        "type": "volume",
+        "name": "services_backend_static",
+        "source": "/var/lib/docker/volumes/services_backend_static/_data",
+        "destination": "/app/app/static",
+        "driver": "local",
+        "mode": "rw",
+        "rw": true,
+        "propagation": ""
+      }
+    ]
+  },
+  {
+    "id": "0775c609af45f6958831e08487468e0ec696f06c15500c37d42e58c56b9fb1d1",
+    "names": [
+      "/services_redis_dashboard_1"
+    ],
+    "image": "eoranged/rq-dashboard",
+    "imageID": "sha256:0ddebcbe71c466edc8a4dfe14dab89b1e3a7b8a74d2173bba667fe7c93f009ff",
+    "command": "python3 -m rq_dashboard",
+    "created": "2022-11-10T17:11:37Z",
+    "ports": [
+      {
+        "ip": "0.0.0.0",
+        "privatePort": 9181,
+        "publicPort": 59181,
+        "type": "tcp"
+      }
+    ],
+    "sizeRw": 0,
+    "sizeRootFs": 0,
+    "labels": {
+      "com.docker.compose.config-hash": "5f89b3965a145e208dda3aa090310fd30a61e24699891ab345c2e56225852c38",
+      "com.docker.compose.container-number": "1",
+      "com.docker.compose.oneoff": "False",
+      "com.docker.compose.project": "services",
+      "com.docker.compose.project.config_files": "docker-compose.yaml",
+      "com.docker.compose.project.working_dir": "/Users/ap/problemshared/services",
+      "com.docker.compose.service": "redis_dashboard",
+      "com.docker.compose.version": "1.29.2"
+    },
+    "state": "running",
+    "status": "Up 12 seconds",
+    "networkSettings": {
+      "networks": {
+        "services_docker-problemshared": {
+          "ipamConfig": null,
+          "links": null,
+          "aliases": null,
+          "networkID": "07343fe27217172ad7a47364e2b432b6ef55463d1b80edfe0013643644bb9cc7",
+          "endpointID": "5a68f6dc7fdd1e4ec57d4a57584bd7d992b585306ff4c9965daf075871b26f64",
+          "gateway": "172.21.0.1",
+          "ipAddress": "172.21.0.6",
+          "ipPrefixLen": 16,
+          "iPv6Gateway": "",
+          "globalIPv6Address": "",
+          "globalIPv6PrefixLen": 0,
+          "macAddress": "02:42:ac:15:00:06",
+          "driverOpts": null
+        }
+      }
+    },
+    "mounts": []
+  },
+  {
+    "id": "b75bd2a407ff292f08fbff4c4a0af3157f0e0876ad4c108cc8c1a2a2ada36bb7",
+    "names": [
+      "/services_media_1"
+    ],
+    "image": "media",
+    "imageID": "sha256:930101b47f8f24ed69bdfeb8b5742cb61ddf32edb4155cd18a043edd1e1b1e8a",
+    "command": "/docker-entrypoint.sh nginx -g 'daemon off;'",
+    "created": "2022-11-10T17:11:36Z",
+    "ports": [
+      {
+        "ip": "0.0.0.0",
+        "privatePort": 80,
+        "publicPort": 50003,
+        "type": "tcp"
+      }
+    ],
+    "sizeRw": 0,
+    "sizeRootFs": 0,
+    "labels": {
+      "com.docker.compose.config-hash": "c64d4e804109d26d9b1f161244fce80270fc87747793bd40e6ad0cfa2aa50266",
+      "com.docker.compose.container-number": "1",
+      "com.docker.compose.oneoff": "False",
+      "com.docker.compose.project": "services",
+      "com.docker.compose.project.config_files": "docker-compose.yaml",
+      "com.docker.compose.project.working_dir": "/Users/ap/problemshared/services",
+      "com.docker.compose.service": "media",
+      "com.docker.compose.version": "1.29.2",
+      "desktop.docker.io/binds/1/Source": "/Users/ap/problemshared/services/media/conf.d",
+      "desktop.docker.io/binds/1/SourceKind": "hostFile",
+      "desktop.docker.io/binds/1/Target": "/etc/nginx/conf.d",
+      "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>"
+    },
+    "state": "running",
+    "status": "Up 14 seconds",
+    "networkSettings": {
+      "networks": {
+        "services_docker-problemshared": {
+          "ipamConfig": null,
+          "links": null,
+          "aliases": null,
+          "networkID": "07343fe27217172ad7a47364e2b432b6ef55463d1b80edfe0013643644bb9cc7",
+          "endpointID": "cf5827b5b4ccb591d2b3bfdbed7ddb45208aba80910126a98cec6879b122e41f",
+          "gateway": "172.21.0.1",
+          "ipAddress": "172.21.0.3",
+          "ipPrefixLen": 16,
+          "iPv6Gateway": "",
+          "globalIPv6Address": "",
+          "globalIPv6PrefixLen": 0,
+          "macAddress": "02:42:ac:15:00:03",
+          "driverOpts": null
+        }
+      }
+    },
+    "mounts": [
+      {
+        "type": "bind",
+        "name": null,
+        "source": "/host_mnt/Users/ap/problemshared/services/media/conf.d",
+        "destination": "/etc/nginx/conf.d",
+        "driver": null,
+        "mode": "ro",
+        "rw": false,
+        "propagation": "rprivate"
+      },
+      {
+        "type": "volume",
+        "name": "services_backend_static",
+        "source": "/var/lib/docker/volumes/services_backend_static/_data",
+        "destination": "/usr/share/nginx/html",
+        "driver": "local",
+        "mode": "rw",
+        "rw": true,
+        "propagation": ""
+      }
+    ]
+  },
+  {
+    "id": "bf0ae8107145dbf6fd3457a95928fcea8a7ec1f141e8049084e0eab62a281daf",
+    "names": [
+      "/services_mailhog_1"
+    ],
+    "image": "mailhog/mailhog:latest",
+    "imageID": "sha256:4de68494cd0dbcbc141beb755eedce4d328ab10b2d1061d74c2489e0af5f28a9",
+    "command": "MailHog",
+    "created": "2022-11-10T17:11:36Z",
+    "ports": [
+      {
+        "ip": "0.0.0.0",
+        "privatePort": 1025,
+        "publicPort": 51025,
+        "type": "tcp"
+      },
+      {
+        "ip": "0.0.0.0",
+        "privatePort": 8025,
+        "publicPort": 58025,
+        "type": "tcp"
+      }
+    ],
+    "sizeRw": 0,
+    "sizeRootFs": 0,
+    "labels": {
+      "com.docker.compose.config-hash": "3e6c59b80f1fe092eda7c930426c35c09806580c435be6ecb315263a2a8dbbe3",
+      "com.docker.compose.container-number": "1",
+      "com.docker.compose.oneoff": "False",
+      "com.docker.compose.project": "services",
+      "com.docker.compose.project.config_files": "docker-compose.yaml",
+      "com.docker.compose.project.working_dir": "/Users/ap/problemshared/services",
+      "com.docker.compose.service": "mailhog",
+      "com.docker.compose.version": "1.29.2",
+      "desktop.docker.io/binds/0/Source": "/Users/ap/problemshared/services/shared/config",
+      "desktop.docker.io/binds/0/SourceKind": "hostFile",
+      "desktop.docker.io/binds/0/Target": "/home/mailhog/config"
+    },
+    "state": "running",
+    "status": "Up 13 seconds",
+    "networkSettings": {
+      "networks": {
+        "services_docker-problemshared": {
+          "ipamConfig": null,
+          "links": null,
+          "aliases": null,
+          "networkID": "07343fe27217172ad7a47364e2b432b6ef55463d1b80edfe0013643644bb9cc7",
+          "endpointID": "15c63b34ee036a62c6df4a587bbede3de89096fb5651613398a845e947ed7acc",
+          "gateway": "172.21.0.1",
+          "ipAddress": "172.21.0.5",
+          "ipPrefixLen": 16,
+          "iPv6Gateway": "",
+          "globalIPv6Address": "",
+          "globalIPv6PrefixLen": 0,
+          "macAddress": "02:42:ac:15:00:05",
+          "driverOpts": null
+        }
+      }
+    },
+    "mounts": [
+      {
+        "type": "bind",
+        "name": null,
+        "source": "/host_mnt/Users/ap/problemshared/services/shared/config",
+        "destination": "/home/mailhog/config",
+        "driver": null,
+        "mode": "rw",
+        "rw": true,
+        "propagation": "rprivate"
+      }
+    ]
+  },
+  {
+    "id": "415bd4077a3a3f05f33136f41978420f5a2f75d71373db72130547842e6818e8",
+    "names": [
+      "/services_postgres_db_1"
+    ],
+    "image": "bitnami/postgresql:latest",
+    "imageID": "sha256:a006c98ad40b032daa897833c9b45b78065efe0168e687c9cd55a151c8177a37",
+    "command": "/opt/bitnami/scripts/postgresql/entrypoint.sh /opt/bitnami/scripts/postgresql/run.sh",
+    "created": "2022-11-10T17:11:36Z",
+    "ports": [
+      {
+        "ip": "0.0.0.0",
+        "privatePort": 5432,
+        "publicPort": 55432,
+        "type": "tcp"
+      }
+    ],
+    "sizeRw": 0,
+    "sizeRootFs": 0,
+    "labels": {
+      "com.docker.compose.config-hash": "e61676ab1a65e629bf875a29ce4f6c493cd595b659fccb4e8d036474deb833a9",
+      "com.docker.compose.container-number": "1",
+      "com.docker.compose.oneoff": "False",
+      "com.docker.compose.project": "services",
+      "com.docker.compose.project.config_files": "docker-compose.yaml",
+      "com.docker.compose.project.working_dir": "/Users/ap/problemshared/services",
+      "com.docker.compose.service": "postgres_db",
+      "com.docker.compose.version": "1.29.2",
+      "desktop.docker.io/binds/1/Source": "/Users/ap/problemshared/services/shared/scripts/docker-postgresql-multiple-databases",
+      "desktop.docker.io/binds/1/SourceKind": "hostFile",
+      "desktop.docker.io/binds/1/Target": "/docker-entrypoint-initdb.d",
+      "org.opencontainers.image.authors": "https://bitnami.com/contact",
+      "org.opencontainers.image.description": "Application packaged by Bitnami",
+      "org.opencontainers.image.ref.name": "15.0.0-debian-11-r7",
+      "org.opencontainers.image.source": "https://github.com/bitnami/containers/tree/main/bitnami/postgresql",
+      "org.opencontainers.image.title": "postgresql",
+      "org.opencontainers.image.vendor": "VMware, Inc.",
+      "org.opencontainers.image.version": "15.0.0"
+    },
+    "state": "running",
+    "status": "Up 13 seconds",
+    "networkSettings": {
+      "networks": {
+        "services_docker-problemshared": {
+          "ipamConfig": null,
+          "links": null,
+          "aliases": null,
+          "networkID": "07343fe27217172ad7a47364e2b432b6ef55463d1b80edfe0013643644bb9cc7",
+          "endpointID": "b313706a5d7db8a493b50c1d3258aedea577c3dec92f6ec4751c2b19d10314e8",
+          "gateway": "172.21.0.1",
+          "ipAddress": "172.21.0.4",
+          "ipPrefixLen": 16,
+          "iPv6Gateway": "",
+          "globalIPv6Address": "",
+          "globalIPv6PrefixLen": 0,
+          "macAddress": "02:42:ac:15:00:04",
+          "driverOpts": null
+        }
+      }
+    },
+    "mounts": [
+      {
+        "type": "volume",
+        "name": "services_postgres_db",
+        "source": "/var/lib/docker/volumes/services_postgres_db/_data",
+        "destination": "/bitnami/postgresql",
+        "driver": "local",
+        "mode": "rw",
+        "rw": true,
+        "propagation": ""
+      },
+      {
+        "type": "bind",
+        "name": null,
+        "source": "/host_mnt/Users/ap/problemshared/services/shared/scripts/docker-postgresql-multiple-databases",
+        "destination": "/docker-entrypoint-initdb.d",
+        "driver": null,
+        "mode": "rw",
+        "rw": true,
+        "propagation": "rprivate"
+      },
+      {
+        "type": "volume",
+        "name": "eac4dcfcbcd1032e50753df92e7da3089eb499dee2ad54e2864c613ce5502d4b",
+        "source": "",
+        "destination": "/docker-entrypoint-preinitdb.d",
+        "driver": "local",
+        "mode": "",
+        "rw": true,
+        "propagation": ""
+      }
+    ]
+  },
+  {
+    "id": "67f1ef797cb307f71c83aa8f1c476b52709ecc4574a6d0890431728e0c10d7ba",
+    "names": [
+      "/services_redis_db_1"
+    ],
+    "image": "bitnami/redis:latest",
+    "imageID": "sha256:6b0630e8d13c74c10f51b1a0342e5fd2400784a615c9bbe1944e228ce923c2ec",
+    "command": "/opt/bitnami/scripts/redis/entrypoint.sh /opt/bitnami/scripts/redis/run.sh",
+    "created": "2022-11-10T17:11:36Z",
+    "ports": [
+      {
+        "ip": "0.0.0.0",
+        "privatePort": 6379,
+        "publicPort": 56379,
+        "type": "tcp"
+      }
+    ],
+    "sizeRw": 0,
+    "sizeRootFs": 0,
+    "labels": {
+      "com.docker.compose.config-hash": "50b8c948a9822e8dea87a088e6d706c6aadf0a7bcbc94901bed4be4f0b306937",
+      "com.docker.compose.container-number": "1",
+      "com.docker.compose.oneoff": "False",
+      "com.docker.compose.project": "services",
+      "com.docker.compose.project.config_files": "docker-compose.yaml",
+      "com.docker.compose.project.working_dir": "/Users/ap/problemshared/services",
+      "com.docker.compose.service": "redis_db",
+      "com.docker.compose.version": "1.29.2",
+      "org.opencontainers.image.authors": "https://bitnami.com/contact",
+      "org.opencontainers.image.description": "Application packaged by Bitnami",
+      "org.opencontainers.image.ref.name": "7.0.5-debian-11-r17",
+      "org.opencontainers.image.source": "https://github.com/bitnami/containers/tree/main/bitnami/redis",
+      "org.opencontainers.image.title": "redis",
+      "org.opencontainers.image.vendor": "VMware, Inc.",
+      "org.opencontainers.image.version": "7.0.5"
+    },
+    "state": "running",
+    "status": "Up 14 seconds",
+    "networkSettings": {
+      "networks": {
+        "services_docker-problemshared": {
+          "ipamConfig": null,
+          "links": null,
+          "aliases": null,
+          "networkID": "07343fe27217172ad7a47364e2b432b6ef55463d1b80edfe0013643644bb9cc7",
+          "endpointID": "2c6df0b9c86a61e7f0fa29e7400266ea69ceba1b0d3a03c5d90accc397d7581c",
+          "gateway": "172.21.0.1",
+          "ipAddress": "172.21.0.2",
+          "ipPrefixLen": 16,
+          "iPv6Gateway": "",
+          "globalIPv6Address": "",
+          "globalIPv6PrefixLen": 0,
+          "macAddress": "02:42:ac:15:00:02",
+          "driverOpts": null
+        }
+      }
+    },
+    "mounts": [
+      {
+        "type": "volume",
+        "name": "services_redis_db_data",
+        "source": "/var/lib/docker/volumes/services_redis_db_data/_data",
+        "destination": "/bitnami/redis/data",
+        "driver": "local",
+        "mode": "rw",
+        "rw": true,
+        "propagation": ""
+      }
+    ]
+  },
+  {
+    "id": "db17370615aaf310919e64216d50ba335606dd60c0e816c7e113c421ee70fa66",
+    "names": [
+      "/hungry_nightingale"
+    ],
+    "image": "controll",
+    "imageID": "sha256:1eb0760bc235676ee54e4ac920c84ed996d420b2197b86d600f4192273263692",
+    "command": "/bin/sh",
+    "created": "2022-11-10T17:05:41Z",
+    "ports": [],
+    "sizeRw": 0,
+    "sizeRootFs": 0,
+    "labels": {
+      "desktop.docker.io/binds/0/Source": "/var/run/docker.sock",
+      "desktop.docker.io/binds/0/SourceKind": "dockerSocketProxied",
+      "desktop.docker.io/binds/0/Target": "/var/run/docker.sock"
+    },
+    "state": "running",
+    "status": "Up 4 minutes",
+    "networkSettings": {
+      "networks": {
+        "bridge": {
+          "ipamConfig": null,
+          "links": null,
+          "aliases": null,
+          "networkID": "3bf9182c620dbe07b9e0d190dc131825cdef95c097c557d51c661c57d85ac4ae",
+          "endpointID": "0d91288ce3cb6a65ca40890a3039f0fd91a3dc1ebca19550723182388b3136c9",
+          "gateway": "172.17.0.1",
+          "ipAddress": "172.17.0.2",
+          "ipPrefixLen": 16,
+          "iPv6Gateway": "",
+          "globalIPv6Address": "",
+          "globalIPv6PrefixLen": 0,
+          "macAddress": "02:42:ac:11:00:02",
+          "driverOpts": null
+        }
+      }
+    },
+    "mounts": [
+      {
+        "type": "bind",
+        "name": null,
+        "source": "/run/host-services/docker.proxy.sock",
+        "destination": "/var/run/docker.sock",
+        "driver": null,
+        "mode": "",
+        "rw": true,
+        "propagation": "rprivate"
+      }
+    ]
+  }
+]
