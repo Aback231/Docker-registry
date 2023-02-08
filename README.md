@@ -38,4 +38,4 @@ Tested on: `macOS Monterey 12.6` and latest `Archlinux`
 
 Both API's have Swagger enabled.
 
-![alt text](https://github.com/APback2331/docker_reg/blob/main/scr.png?raw=true)
+![alt text](https://github.com/Aback231/Docker-registry/blob/main/scr.png?raw=true)
