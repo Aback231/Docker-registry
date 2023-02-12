@@ -4,7 +4,7 @@
 
 ## Services
 
-Git Actions are defined for each of `web_api`, `docker_api` and `web_app`. On each new commit Docker containers are built automatically and pushed to private Docker Hub repo. Each action has a filter which triggers a new build only when there are changes inside the underlying folder (e.g web_api folder for `web_api` service). Builds run in parallel and finish in 2 minutes tops.
+`Git Actions` are defined for each of `web_api`, `docker_api` and `web_app`. On each new commit Docker containers are built automatically and pushed to private `Docker Hub` repo. Each action has a filter which triggers a new build only when there are changes inside the underlying folder (e.g web_api folder for `web_api` service). Builds run in parallel and finish in 2 minutes tops.
 
 Docker-compose is used to build and orchestrate all the services. Each of them could be started separately and locally as well.
 
