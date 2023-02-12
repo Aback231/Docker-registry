@@ -1,6 +1,6 @@
 # Docker registry .NET Core 6 Backend API's and Angular Web App to control and escape Docker containers
 
-![alt text](https://github.com/Aback231/Docker-registry/blob/main/scr.png?raw=true)
+![alt text](https://github.com/Aback231/Self-updating-escaped-Docker-API-NET-Core-Angular/blob/main/scr.png?raw=true)
 
 
 ## Services
