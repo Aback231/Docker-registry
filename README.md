@@ -26,6 +26,7 @@ Docker-compose is used to build and orchestrate all the services. Each of them c
 Be awere that complete build could last more than 10min hammering the CPU and use more than 15GB of storage!
 
 To build containers navigate to the root folder containing `docker-compose.yml` file and execute: 
+
 `docker-compose up --build --detach`
 
 Inside Docker `docker_api` runs on http://localhost:8000
